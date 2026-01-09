@@ -1,13 +1,13 @@
 package com.feng.faiagent.rag;
 
-import dev.langchain4j.data.document.Document;
-import dev.langchain4j.model.embedding.EmbeddingModel;
-import jakarta.annotation.Resource;
+import org.springframework.ai.embedding.EmbeddingModel;  // 使用 Spring AI 的 EmbeddingModel
 import org.springframework.ai.vectorstore.SimpleVectorStore;
 import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.ai.document.Document;
 
+import jakarta.annotation.Resource;
 import java.util.List;
 
 @Configuration
@@ -26,4 +26,3 @@ public class LoveAppVectorStoreConfig {
         return simpleVectorStore;
     }
 }
-
